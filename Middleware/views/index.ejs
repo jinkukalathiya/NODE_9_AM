@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Able Pro Dashboard</title>
+        <link rel="icon" href="./assets/images/favicon.svg" type="image/svg">
+        <link rel="stylesheet" href="./assets/css/fonts.css">
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="./assets/css/jquery-jvectormap.css">
+        <link rel="stylesheet" href="./assets/css/style.css" id="colorChange">
+        <link rel="stylesheet" href="./assets/css/media.css">
+    </head>
+    <body class="loading">
+        <div class="page-loader">
+            <div class="loader">
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+                <div class="s1"></div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="sidebar">
+                <div class="logo">
+                    <a href="./dashboard.html">
+                        <img src="./assets/images/logo/logo-white.svg" alt="Logo" class="light-logo">
+                        <img src="./assets/images/logo/logo-dark.svg" alt="Logo" class="dark-logo">
+                    </a>
+                </div>
+                <div class="sidebar-content">
+                    <div class="user-card">
+                        <div class="user-profile">
+                            <div class="user-img">
+                                <img src="./assets/images/user/avatar-2.jpg" alt="user">
+                            </div>
+                            <div class="user-detail">
+                                <h4>Jinkal Kalathiya</h4>
+                                <p>Administrator</p>
+                            </div>
+                            <a href="#" class="user-toggle">
+                                <i data-feather="menu"></i>
+                            </a>
+                        </div>
+                        <div class="user-link">
+                            <a href="#">
+                                <i data-feather="user"></i>
+                                <span>My Account</span>
+                            </a>
+                            <a href="#">
+                                <i data-feather="settings"></i>
+                                <span>Settings</span>
+                            </a>
+                            <a href="#">
+                                <i data-feather="lock"></i>
+                                <span>Lock Screen</span>
+                            </a>
+                            <a href="#">
+                                <i data-feather="power"></i>
+                                <span>Logout</span>
+                            </a>    
+                        </div>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li class="sidebar-header">
+                                <h5>Navigation</h5>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="sidebar-dropdown-menu">
+                                    <a href="#">
+                                        <span>Default</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Analytics</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Finance</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i data-feather="file"></i>
+                                    <span>Layouts</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                                <div class="sidebar-dropdown-menu">
+                                    <a href="#">
+                                        <span>Vertical</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Horizontal</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Layout 2</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Compact</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Tab</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Widgets</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="alert-circle"></i>
+                                    <span>Statistics</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="database"></i>
+                                    <span>Data</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="pie-chart"></i>
+                                    <span>Chart</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Admin Panel</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Ui Components</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Forms</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Table</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Charts ^ Maps</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Application</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Pages</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="sidebar-header">
+                                <h5>Others</h5>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="activity"></i>
+                                    <span>Dashboard</span>
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body-wrapper">
+                <header>
+                    <a href="javascript:void(0);" class="toggle-btn">
+                        <i data-feather="menu"></i>
+                    </a>
+                    <div class="search-bar">
+                        <form action="" method="post">
+                            <i data-feather="search"></i>
+                            <input type="search" name="search" id="" class="form-control">
+                        </form>
+                    </div>
+                    <div class="menu-right">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);" onclick="toggleFullScreen(document.body)">
+                                    <i data-feather="maximize"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-path="./assets/css/light.css" class="light">
+                                    <i data-feather="sun"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">
+                                    <i data-feather="settings"></i>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="#">
+                                        <i data-feather="user"></i>
+                                        <span>My Account</span>
+                                    </a>
+                                    <a href="#">
+                                        <i data-feather="settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a href="#">
+                                        <i data-feather="headphones"></i>
+                                        <span>Support</span>
+                                    </a>
+                                    <a href="#">
+                                        <i data-feather="lock"></i>
+                                        <span>Lock Screen</span>
+                                    </a>
+                                    <a href="#">
+                                        <i data-feather="power"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="zap"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="bell"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="user-setting">
+                                    <img src="./assets/images/user/avatar-2.jpg" alt="user-profile">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <div class="page-body">
+                    <div class="row row-gap-30">
+                        <div class="col-12">
+                            <div class="card welcom-banner">
+                                <div class="row items-center">
+                                    <div class="col-6">
+                                        <div class="banner-content">
+                                            <h2>Explore Redesigned Able Pro</h2>
+                                            <p>The Brand new User Interface with power of Bootstrap Components. Explore the Endless possibilities with Able Pro.</p>
+                                            <a href="#">Exclusive on Themeforest</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="banner-img">
+                                            <img src="./assets/images/card/welcome-banner.png" alt="welcome banner">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div id="chart"></div>
+                                        </div>
+                                        <div class="col-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="file-text"></i>
+                                    </div>
+                                    <h4>Page Views</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div id="chart1"></div>
+                                        </div>
+                                        <div class="col-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="calendar"></i>
+                                    </div>
+                                    <h4>Totak Tasks</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-6 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="arrow-down-circle"></i>
+                                    </div>
+                                    <h4>Download</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-9 col-xl-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="customerRate"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-5 col-lg-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-9 col-xl-7 col-lg-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-5 col-lg-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div id='calendar'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-7 col-lg-12  col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Transactions</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-group">
+                                        <div class="tab-wrapper">
+                                            <ul class="tabs">
+                                                <li class="tab-link active" data-tab="1">All Transactions</li>
+                                                <li class="tab-link" data-tab="2">Success</li>
+                                                <li class="tab-link" data-tab="3">Pending</li>
+                                            </ul>
+                                        </div>                                 
+                                        <div class="content-wrapper">
+                                            <div id="tab-1" class="tab-content active">
+                                                <ul>
+                                                    <li>
+                                                        <div class="avtar">
+                                                            <i data-feather="alert-octagon"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="avtar">
+                                                            <i data-feather="alert-octagon"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="avtar">
+                                                            <i data-feather="alert-octagon"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="avtar">
+                                                            <i data-feather="alert-octagon"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="avtar">
+                                                            <i data-feather="alert-octagon"></i>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>                                    
+                                            <div id="tab-2" class="tab-content">CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.</div>                                    
+                                            <div id="tab-3" class="tab-content">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</div>                                    
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="heading-icon">
+                                        <i data-feather="credit-card"></i>
+                                    </div>
+                                    <h4>All Earnings</h4>
+                                    <a href="#" class="menu">
+                                        <i data-feather="more-vertical"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/apexcharts.js"></script>
+        <script src="./assets/js/chart.js"></script>
+        <script src="./assets/js/jquery-jvectormap-1.1.1.min.js"></script>
+        <script src="./assets/js/jquery-jvectormap-world-mill.js"></script>
+        <script src="./assets/js/index.global.min.js"></script>
+        <script>
+            feather.replace();
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".user-toggle").click(function(){
+                    $(".user-link").slideToggle();
+                });
+
+                $(".sidebar-dropdown > a").click(function () {
+                    $(".sidebar-dropdown-menu").slideUp(200);
+                    if ($(this).parent().hasClass("active")) {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this).parent().removeClass("active");
+                    } else {
+                        $(".sidebar-dropdown").removeClass("active");
+                        $(this).next(".sidebar-dropdown-menu").slideDown(200);
+                        $(this).parent().addClass("active");
+                    }
+                });
+
+                $(".toggle-btn").click(function(){
+                    $(".sidebar").toggleClass("close-sidebar");
+                });
+
+
+                $(".light").click(function(){
+                    var path = $(this).data('path');
+                    console.log(path);
+                    $("#colorChange").attr('href', path);
+                });
+            });
+
+            $(window).on('load',function(){
+                $(".loader").delay(1500).fadeOut(500);
+                $(".page-loader").delay(2000).fadeOut(500);
+               
+                setInterval(function(){
+                    $("body").removeClass("loading");
+                },2500);
+            })
+        </script>
+        <script>
+            var markers = [
+                { latLng: [41.5, -87.37], name: "Chicago" },
+                { latLng: [32.46, -96.46], name: "Dallas" },
+                { latLng: [36.1, -115.12], name: "Las Vegas" },
+                { latLng: [34.3, -118.15], name: "Los Angeles" },
+                { latLng: [40.43, -74.0], name: "New York City" },
+                { latLng: [53.41291, -8.24389], name: "Ireland" },
+                { latLng: [42.697708, 23.321868], name: "Sofia, Bulgia" },
+                { latLng: [40.014986, -105.270546], name: "Boulder, CO" },
+                { latLng: [21.170240, 72.831062], name: "Surat, CO" }
+            ];
+
+            $(function () {
+                $("#map").vectorMap({
+                    map: "world_mill",
+                    zoomOnScroll: false,
+                    hoverOpacity: 0.7,
+                    markerStyle: {
+                    initial: {
+                        fill: "#FFD700",
+                        stroke: "#383f47"
+                    }
+                    },
+                    markers: markers
+                });
+            });
+
+            function addMapPoint(lat, lon, title) {
+            removeMapPoint();
+            var map = $("#map").vectorMap("get", "mapObject");
+            map.addMarkers([{ latLng: [lat, lon], name: title }], []);
+            }
+
+            function removeMapPoint() {
+            var map = $("#map").vectorMap("get", "mapObject");
+            map.removeAllMarkers();
+            }
+
+            function generateRandomLong() {
+            var num = (Math.random() * 180).toFixed(3);
+            var posorneg = Math.floor(Math.random());
+            if (posorneg == 0) {
+                num = num * -1;
+            }
+            return num;
+            }
+
+            function generateRandomLat() {
+            var num = (Math.random() * 90).toFixed(3);
+            var posorneg = Math.floor(Math.random());
+            if (posorneg == 0) {
+                num = num * -1;
+            }
+            return num;
+            }
+
+            window.setInterval(function () {
+            var lon = generateRandomLong();
+            var lat = generateRandomLat();
+
+            addMapPoint(lat, lon, lat + "," + lon);
+            }, 2500);
+
+        </script>
+        <script>
+            function toggleFullScreen(elem) {
+                if (
+                    (document.fullScreenElement !== undefined &&
+                        document.fullScreenElement === null) ||
+                    (document.msFullscreenElement !== undefined &&
+                        document.msFullscreenElement === null) ||
+                    (document.mozFullScreen !== undefined && !document.mozFullScreen) ||
+                    (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)
+                ) {
+                  if (elem.requestFullScreen) {
+                    elem.requestFullScreen();
+                  } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                  } else if (elem.webkitRequestFullScreen) {
+                    elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                  } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                  }
+                } else {
+                  if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                  } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                  } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                  } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                  }
+                }
+              }
+              
+        </script>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+              var calendarEl = document.getElementById('calendar');
+              var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+              });
+              calendar.render();
+            });
+      
+          </script>
+          <script>
+            $(".tab-link").click(function () {
+	var tabID = $(this).attr("data-tab");
+
+	$(this).addClass("active").siblings().removeClass("active");
+
+	$("#tab-" + tabID)
+		.addClass("active")
+		.siblings()
+		.removeClass("active");
+});
+
+          </script>
+    </body>
+</html>
