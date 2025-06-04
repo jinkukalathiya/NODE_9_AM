@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form data</title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            h1{
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            table{
+                width: 1200px;
+                padding: 0;
+                border: 1px solid #212121;
+                margin: 0 auto 20px;
+            }
+            table thead{
+                background-color: slateblue;
+                color: white;
+            }
+            table tr td, table tr th{
+                border-bottom: 1px solid #212121;
+                border-right: 1px solid #212121;
+                padding: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+            table tr:nth-child(even){
+                background-color: rgb(223, 220, 242);
+            }
+            table a{
+                background-color: crimson;
+                display: block;
+                color: white;
+                padding: 5px 10px;
+                text-decoration: none;
+                border-radius: 8px;
+            }
+            .update{
+                background-color: goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Data</h1>
+        <form action="/insertData" method="post"  enctype="multipart/form-data">
+            <table>
+                        <input type="hidden" name="updateId" value="<%= single.id %>">
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" name="name" value="<%= single.name %>"></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="email" name="email" value="<%= single.email %>"></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="password" name="password" value="<%= single.password %>"></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" <% if (single.gender === 'male') { %> checked <% } %> > Male
+                        <input type="radio" name="gender" value="female" <% if (single.gender === 'female') { %> checked <% } %> > Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobby :</td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="reading" <% if (single.hobby.includes("reading")) { %> checked <% } %> > Reading</label>
+                        <label><input type="checkbox" name="hobby" value="music" <% if (single.hobby.includes("music")) { %> checked <% } %> > Music</label>
+                        <label><input type="checkbox" name="hobby" value="writing" <% if (single.hobby.includes("writing")) { %> checked <% } %> > Writing</label>
+                        <label><input type="checkbox" name="hobby" value="travelling" <% if (single.hobby.includes("travelling")) { %> checked <% } %> > Travelling</label>
+                        <label><input type="checkbox" name="hobby" value="surfing" <% if (single.hobby.includes("surfing")) { %> checked <% } %> > Surfing</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City :</td>
+                    <td>
+                        <select name="city">
+                            <option>Select Your City</option>
+                            <%
+                                let city = ["Surat", "Ahmedabad", "Rajkot", "Pune", "Mumbai"];
+                                city.map((val) => {
+                            %>
+                                    <option value="<%= val %>" <% if(single.city == val) { %> selected <% } %> ><%= val %></option>
+
+                            <%  }) %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone :</td>
+                    <td><input type="number" name="phone" value="<%= single.phone %>"></td>
+                </tr>
+                <tr>
+                    <td>Upload :</td>
+                    <td>
+                        <input type="file" name="image">
+                        <img src="<%= single.image %>" width="100" alt="profile">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>

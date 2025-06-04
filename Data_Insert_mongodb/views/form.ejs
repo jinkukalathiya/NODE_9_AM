@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form data</title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            h1{
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            table{
+                width: 1200px;
+                padding: 0;
+                border: 1px solid #212121;
+                margin: 0 auto 20px;
+            }
+            table thead{
+                background-color: slateblue;
+                color: white;
+            }
+            table tr td, table tr th{
+                border-bottom: 1px solid #212121;
+                border-right: 1px solid #212121;
+                padding: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+            table tr:nth-child(even){
+                background-color: rgb(223, 220, 242);
+            }
+            table a{
+                background-color: crimson;
+                display: block;
+                color: white;
+                padding: 5px 10px;
+                text-decoration: none;
+                border-radius: 8px;
+            }
+            .update{
+                background-color: goldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Data</h1>
+        <form action="/insertData" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobby :</td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+                        <label><input type="checkbox" name="hobby" value="music"> Music</label>
+                        <label><input type="checkbox" name="hobby" value="writing"> Writing</label>
+                        <label><input type="checkbox" name="hobby" value="travelling"> Travelling</label>
+                        <label><input type="checkbox" name="hobby" value="surfing"> Surfing</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City :</td>
+                    <td>
+                        <select name="city">
+                            <option>Select Your City</option>
+                            <%
+                                let city = ["Surat", "Ahmedabad", "Rajkot", "Pune", "Mumbai"];
+                                city.map((val) => {
+                            %>
+                                    <option value="<%= val %>"><%= val %></option>
+
+                            <%  }) %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone :</td>
+                    <td><input type="number" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>Upload :</td>
+                    <td><input type="file" name="image"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Gender</td>
+                <td>Hobby</td>
+                <td>City</td>
+                <td>Phone</td>                
+                <td>Image</td>                
+                <td>Action</td>
+            </tr>
+            <% record.map((item) => { 
+                const { id, name, email, password, gender, hobby, city, phone, image } = item
+                %>
+                <tr>
+                    <td><%= name %></td>
+                    <td><%= email %></td>
+                    <td><%= password %></td>
+                    <td><%= gender %></td>
+                    <td><%= hobby %></td>
+                    <td><%= city %></td>
+                    <td><%= phone %></td>
+                    <td>
+                        <img src="<%= image %>" alt="" width="100">
+                    </td>
+                    <td>
+                        <a href="/deleteData/<%= id %>">Delete</a>
+                    <br>
+                        <a href="/updateData?id=<%= id %>" class="update">Update</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+
+    </body>
+</html>

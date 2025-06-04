@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            h1{
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin-bottom: 20px;
+            }
+            nav{
+                margin-bottom: 30px;
+            }
+            nav ul{
+                display: flex;
+                justify-content: center;
+                column-gap: 40px;
+                list-style: none;
+                padding-left: 0;
+            }
+            nav ul li a{
+                text-decoration: none;
+                display: block;
+                font-size: 18px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: steelblue;
+                font-weight: 600;
+            }
+            table{
+                margin: 20px auto;
+            }
+            .btn, .upbtn{
+                background-color: crimson;
+                border: none;
+                outline: none;
+                padding: 5px 10px;
+            }
+            .btn a, .upbtn a{
+                text-decoration: none;
+                color: white;
+            }
+            .upbtn{
+                background-color: peru;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Home Page...</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="">Pages</a>
+                </li>
+                <li>
+                    <a href="/service">Service</a>
+                </li>
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <form method="post" action="/student/addStudent">
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Student Email :</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Student Password :</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <button type="submit">Add Student Detail</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Student Email</th>
+                <th>Student Password</th>
+                <th>Action</th>
+            </tr>
+            <% allStudentData.map((value, index) => { %>
+                <tr>
+                    <td><%= value.email %></td>
+                    <td><%= value.password %></td>
+                    <td>
+                        <button class="btn">
+                            <a href="/student/deleteData/?stdId=<%= value.id %>">Delete</a> 
+                        </button>
+                        ||
+                        <button class="upbtn">
+                            <a href="/student/updateData/<%= value.id %>">Update</a>
+                        </button>
+                    </td>
+                </tr>
+            <% }) %>
+            
+        </table> 
+        
+        
+    </body>
+</html>

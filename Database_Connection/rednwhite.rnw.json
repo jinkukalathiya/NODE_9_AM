@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "682ab3f50095135992006b3d"
+  },
+  "name": "Jinkal Kalathiya",
+  "email": "rnw1webjinkal@gmail.com",
+  "password": "123456",
+  "phone": "9054928262"
+}]
+
+{
+  "_id": {
+    "$oid": "682ab3f50095135992006b3d"
+  },
+  "name": "Jinkal Kalathiya",
+  "email": "rnw1webjinkal@gmail.com",
+  "password": "123456",
+  "phone": "9054928262"
+}
