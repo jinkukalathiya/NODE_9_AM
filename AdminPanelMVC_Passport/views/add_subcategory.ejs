@@ -1,0 +1,65 @@
+<%- include('header') %>
+
+    <!-- Page Sidebar Ends-->
+    <div class="page-body">
+        <div class="container-fluid">
+            <div class="page-title">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h3>Subcategory Details</h3>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                            <li class="breadcrumb-item">Subcategory</li>
+                            <li class="breadcrumb-item active">Add Subcategory</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid starts-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-xl-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header pb-0">
+                                    <h5>Add Subcategory Details</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form class="theme-form" action="/subcategory/insertSubCategoryData" method="POST" >
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label" for="inputPassword3">Category Name</label>
+                                            <div class="col-sm-9">
+                                                <select name="categoryId" id="categoryId">
+                                                    <option value="">Select Category</option>
+                                                    <% allCategory.map((v,i) => { %> 
+                                                        <option value="<%- v.id %>"><%= v.cname %></option>
+                                                    <% }); %>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label" for="fileUpload">Subcategory Name</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" type="text" required="" name="subcategoryname" placeholder="Enter Subcategory Name">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <button class="btn btn-primary">Add Subcategory</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid Ends-->
+    </div>
+
+    <%- include('footer') %>

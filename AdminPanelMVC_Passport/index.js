@@ -54,7 +54,9 @@ app.use(flash());
 
 app.use(flashConnect.setFlash);
 
-app.use("/", require('./routes/'));
+app.use("/", require('./routes/admin'));
+
+app.use("/user", require('./routes/user'));
 
 app.listen(port,(err) => {
     if(err){

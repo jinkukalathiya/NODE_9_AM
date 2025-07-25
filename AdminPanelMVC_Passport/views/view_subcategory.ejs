@@ -1,0 +1,70 @@
+<%- include('header') %>
+
+<!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title"> 
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h3>Subcategory Details</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/"><i data-feather="home"> </i></a></li>
+                    <li class="breadcrumb-item">Subcategory</li>
+                    <li class="breadcrumb-item active">View Subcategory</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>View Subcategory</h5>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Category Name</th>
+                          <th scope="col">Category Image</th>
+                          <th scope="col">Subcategory Name</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% subCategoryRecord.map((v, i) { %>
+                          <tr>
+                            <th scope="row"><%= i++ %></th>
+                            <td><%= record.categoryId.cname %></td>
+                            <td>
+                                <img src="<%= record.categoryId.cimage %>" alt="" width="70" height="70" style="object-fit: cover;">
+                            </td>
+                            <td><%= record.subcategoryname %></td>
+                            <td>
+                                <!-- <a href="/delete_category/<%= record.id %>">
+                                <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+                                </a> || 
+                                <a href="/update_admin/?adminId=<%= record.id %>">
+                                <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
+                                </a> -->
+                            </td>
+                        </tr>
+                        <% }); %>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+
+        <%- include('footer') %>

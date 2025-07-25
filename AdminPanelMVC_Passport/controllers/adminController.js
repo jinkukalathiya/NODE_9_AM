@@ -28,8 +28,6 @@ module.exports.checkLogin = async (req, res) => {
     }   
 };
 
-
-
 module.exports.changePassword = async (req,res) => {
     try{
         if(req.user == undefined){

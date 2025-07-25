@@ -1,0 +1,66 @@
+<%- include('header') %>
+
+    <!-- Page Sidebar Ends-->
+    <div class="page-body">
+        <div class="container-fluid">
+            <div class="page-title">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h3>Blog Details</h3>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                            <li class="breadcrumb-item">Blog</li>
+                            <li class="breadcrumb-item active">Add Blog</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid starts-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-xl-6">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header pb-0">
+                                    <h5>Add Blog Details</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form class="theme-form" method="post" action="/addBlog" enctype="multipart/form-data">
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label" for="inputPassword3">Title</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="title" name="title" required placeholder="Write Blog Title Here...">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label" for="content">Content</label>
+                                            <div class="col-sm-9">
+                                                <textarea id="content" name="content" rows="6" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label" for="fileUpload">Blog Image</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" type="file" id="fileUpload" aria-label="file example" required="" name="image">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <button class="btn btn-primary">Add Blog</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container-fluid Ends-->
+    </div>
+
+    <%- include('footer') %>
